@@ -11,8 +11,17 @@ Numerous studies have demonstrated that biological sequences, such as DNA, RNA, 
 ## Table of Contents
 
 - [Datasets](#datasets)
+  - [Get HC features for each datasets](#Get-HC-features-for-each-datasets)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Get BERT features for each datasets](#Get-BERT-features-for-each-datasets)
+  - [Get results of each BERT layers features](#Get-results-of-each-BERT-layers-features)
+  - [Get results of BERTA for each layer to calcualte BF](#Get-results-of-BERTA-for-each-layer-to-calcualte-BF)
+  - [Run the classification results of TaiChiACVP](#Run-the-classification-results-of-TaiChiACVP)
+  - [Run the interpretation of TaiChiNet](#Run-the-interpretation-of-TaiChiNet)
+  - [Get the decision tree path of the classifier](#Get-the-decision-tree-path-of-the-classifier)
+  - [Run other rotation degrees](#Run-other-rotation-degrees)
+  - [Run other LMs](#Run-other-LMs)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
