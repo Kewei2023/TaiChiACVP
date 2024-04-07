@@ -1,6 +1,12 @@
 # TaiChiNet
 
 Numerous studies have demonstrated that biological sequences, such as DNA, RNA, and peptide, can be considered the "language of life". Utilizing pre-trained language models (LMs) like ESM2, GPT, and BERT have yielded state-of-the-art (SOTA) results in many cases. However, the increasing size of datasets exponentially escalates the time and hardware resources required for fine-tuning a complete LM. This paper assumed that natural language shared linguistic logic with the "language of life" like peptides. We took the LM BERT model as an example in a novel Principal Component Analysis (PCA)-based Ying-Yang dilution network of the inter- and intra-BERT layers, termed TaiChiNet, for feature representation of peptide sequences. The Ying-Yang dilution architecture fuses the PCA transformation matrices trained on positive and negative samples, respectively. We transferred the TaiChiNet features into a subtractive layer feature space and observed that TaiChiNet just rotated the original subtractive features with a certain angle and didn’t change the relative distance among the dimensions. TaiChiNet-engineered features together with the hand-crafted (HC) ones were integrated for the prediction model of anti-coronavirus peptides (TaiChiACVP). Experimental results demonstrated that the TaiChiACVP model achieved new SOTA performance and remarkably short training time on five imbalanced datasets established for the anti-coronavirus peptide (ACVP) prediction task. The decision paths of the random forest classifier illustrated that TaiChiNet features can complement HC features for better decisions. TaiChiNet has also learned the latent features significantly correlated with physicochemical properties including molecular weight. This makes an explainable connection between the deep learning-represented features and the ACVP-associated physicochemical properties. Additionally, we extended our work to the other LMs, including ESM2 with 6 or 12 layers, ProGen2 small and base version, ProtBERT, and ProtGPT2. Due to the limitations of these recent LMs, none of them outperforms TaiChiACVP. However, some limitations of TaiChiNet remained to be investigated in the future, including learnable rotation degrees, extended fusions of more layers, and end-to-end training architecture. 
+![The Framework of TaiChiNet](images/taichinet.png)
+
+
+![The Mathematical Illustration of TaiChiNet](images/mathematical.png)
+
+
 
 ## Table of Contents
 
@@ -76,7 +82,7 @@ python train.py
 ```
 python interpretation.py
 ```
-
+![The interpretation of TaiChiNet](images/show interpret.png)
 ### Get the decision tree path of the classifier
 1. modify parameters `plot.tree=true`  in `./config/train_org.yaml` before running
 **NOTICE**:  this change will make the code run really slow.
