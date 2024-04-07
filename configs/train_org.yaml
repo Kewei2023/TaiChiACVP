@@ -1,0 +1,42 @@
+orig_cwd: "."
+
+plot:
+  tree: false #true #true
+  
+features:
+  peptide:
+    LLM: true
+    HC: true # false # true # true
+    
+    properties:
+      load: true
+      # path: "/public1/home/scb6744/TaiChiACVP/properties_data"
+  preload: true
+  pep_len: 200
+  
+  
+
+  pretrained:
+    dilation: 
+      type: 'taichi' # 'nppn+pnnp'#'np+pn+p+n'# 'taichi' #'taichi'# 'taichi' # ['taichi','pcxa'，'mqPepv1','mqPepv2','pp+nn','np+n','pn+p','np','pn']
+      topK: [2]#,2,2,2,2,2,2] # the same length with the features_list 
+      features_list: ['bert']#,'protbert','esm2_t6','esm2_t12','progen2_small','progen2_base','protgpt2'] # 'protbert' 'bert' 'bert-base' 'esm2_t6' 'esm2_t12' 'progen2_small' 'progen2_base' 'protgpt2'
+      comparison: false #false #true #false
+      percentage: -1
+    save:
+      all_layers: true
+      path: "/public1/home/scb6744/TaiChiACVP/embedding_features/"
+
+data:
+  seperate: true
+  reverse: false # false
+  files_list: ["Anti-Virus", "non-AVP", "non-AMP", "All-Neg", "All-AMP"] # ['AmPEP','AMPScan','antibp','Bi-LSTM','Deep-AmPEP30','general model','iAMP','MAMP']
+  # train_file: "/data/home/scv6872/Cambridge/data/AMPScan/AMPScan_train.fa" # "./data/v5/v5_final.csv"
+  # test_file: "/data/home/scv6872/Cambridge/data/AMPScan/AMPScan_test.fa"
+  # dataset_file: "" # if seperate is false
+  
+logger:
+  log: True
+  log_dir: "outputs"
+  log_per_steps: 3
+  final_artifact_path: final
