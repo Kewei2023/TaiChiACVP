@@ -139,9 +139,7 @@ pretrained:
 python train.py
 ```
 
-## Contributing
 
-Explain how others can contribute to your project. Include guidelines for submitting bug reports, feature requests, and pull requests.
 
 ## Contact
 
