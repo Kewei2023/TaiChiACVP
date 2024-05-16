@@ -22,7 +22,6 @@ Numerous studies have demonstrated that biological sequences, such as DNA, RNA, 
   - [Get the decision tree path of the classifier](#Get-the-decision-tree-path-of-the-classifier)
   - [Run other rotation degrees](#Run-other-rotation-degrees)
   - [Run other LMs](#Run-other-LMs)
-- [Contributing](#contributing)
 - [Contact](#contact)
 
 ## Datasets
