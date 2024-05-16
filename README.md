@@ -86,11 +86,12 @@ features:
 ```
 python train.py
 ```
+![The Mathematical Illustration of TaiChiNet](images/TaichiACVP-performance.png)
 ### Run the interpretation of TaiChiNet
 ```
 python interpretation.py
 ```
-![The interpretation of TaiChiNet](images/show interpret.png)
+![The interpretation of TaiChiNet](images/show_interpret.png)
 ### Get the decision tree path of the classifier
 1. modify parameters `plot.tree=true`  in `./config/train_org.yaml` before running
 **NOTICE**:  this change will make the code run really slow.
