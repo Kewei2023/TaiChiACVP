@@ -86,7 +86,7 @@ features:
 ```
 python train.py
 ```
-![The Mathematical Illustration of TaiChiNet](images/TaichiACVP-performance.png)
+![TaiChiACVP Performance](images/TaiChiACVP-performance.png)
 ### Run the interpretation of TaiChiNet
 ```
 python interpretation.py
